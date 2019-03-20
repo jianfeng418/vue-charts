@@ -18,7 +18,7 @@ Vue.use(vueChart);
 ```
 
 ## vue-bar柱状图
-![Image message](1.png)
+![Image message](Animation1.gif)
 使用示例：
 ```
 <button @click='updateBar'>update</button>
@@ -180,7 +180,7 @@ barData.list数据格式：
 </table>
 
 ## vue-circle圆形进度图
-![Image message](2.png)
+![Image message](Animation2.gif)
 
 
 使用示例：
