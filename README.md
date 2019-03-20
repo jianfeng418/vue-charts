@@ -22,6 +22,33 @@ Vue.use(vueChart);
 <vue-bar :barData='barData' :barWid='50' class='barDiv'></vue-bar>
 
 <vue-bar :barData='percentData' :maxValue='1' dataType='percent' :tickValue='0.2' :precision='2' class='barDiv' ></vue-bar>
+
+...
+ data () {
+    return {
+      msg: 'Welcome to Your vue-charts',
+      barData:{
+        title:'业绩（单位w）',
+        list:[
+          {color:'#53b85e',title:'一季度',num:5},
+          {color:'#53805e',title:'二季度',num:14},
+          {color:'#4efff0',title:'三季度',num:6},
+          {color:'#8a94ee',title:'四季度',num:16},
+        ]
+      },
+      percentData:{
+        title:'业绩达成率',
+        list:[
+          {color:'#53b85e',title:'一季度',num:0.15},
+          {color:'#53805e',title:'二季度',num:0.84},
+          {color:'#4efff0',title:'三季度',num:0.6},
+          {color:'#8a94ee',title:'四季度',num:0.76},
+        ]
+      }
+    }
+  }
+...
+
 ```
 
 参数说明
