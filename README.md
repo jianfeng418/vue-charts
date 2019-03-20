@@ -3,7 +3,6 @@
 > A Vue.js project
 
 
-![Image message](1.png)
 
 Usage
 NPM
@@ -17,6 +16,9 @@ import vueChart from 'vue-charts-jf'
 Vue.use(vueChart);
 
 ```
+
+## vue-bar柱状图
+![Image message](1.png)
 使用示例：
 ```
 <button @click='updateBar'>update</button>
@@ -157,6 +159,169 @@ barData.list数据格式：
   <td>num</td>
   <td>Number</td>
   <td>bar图形的数量</td>
+  <td></td>
+  </tr>
+</table>
+
+方法说明：
+<table>
+<tr>
+  <td>方法名称</td>
+  <td>参数</td>
+  <td>返回值</td>
+  <td>描述</td>
+  </tr>
+  <tr>
+  <td>draw</td>
+  <td></td>
+  <td></td>
+  <td>重新绘制图表，在数据更新后，可调用该方法实现图表重绘</td>
+  </tr>
+</table>
+
+## vue-circle圆形进度图
+![Image message](2.png)
+
+
+使用示例：
+```
+<div class='circleDiv'>
+      <vue-circle :circleData='circleData' style='height:300px' centerText='22' :showTip='true' :showLegend='true' ></vue-circle>
+    </div>
+    <div class='circleDiv' >
+      <vue-circle :circleData='perCircleData' style='height:300px' centerText='22%' :showTip='true' :showLegend='true' :centerStyle='cenStyle'></vue-circle>
+    </div>
+...
+ data () {
+    return {
+      msg: 'Welcome to Your vue-charts',
+      circleData:{
+        totle:23,
+        list:[
+          {num:8,title:'一季度',color:'#53b85e'},
+          {num:3,title:'二季度',color:'#53805e'},
+          {num:5,title:'三季度',color:'#4e1ff0'},
+          {num:7,title:'四季度',color:'#8a94ee'}
+        ]
+      },
+      perCircleData:{
+        totle:23,
+        list:[
+          {num:8,title:'一季度',color:'#53b85e'},
+        ]
+      },
+      cenStyle:{
+        fontSize:'24px',
+        fontFamily:'sans-serif',
+        fontColor:'#999'
+      }
+    }
+  }
+
+```
+
+参数说明
+<table>
+<tr>
+  <td>参数名称</td>
+  <td>类型</td>
+  <td>描述</td>
+  <td>默认值</td>
+  </tr>
+  <tr>
+  <td>circleData</td>
+  <td>Object</td>
+  <td>可视化数据源</td>
+  <td></td>
+  </tr>
+    <tr>
+  <td>centerStyle</td>
+  <td>Objectr</td>
+  <td>圆心处文字样式</td>
+  <td>{
+						fontSize:'18px',
+						fontFamily:'sans-serif',
+						fontColor:'#000',
+					}</td>
+  </tr>
+    <tr>
+  <td>showTip</td>
+  <td>Boolean</td>
+  <td>是否显示提示</td>
+  <td>true</td>
+  </tr>
+  <tr>
+  <td>showLegend</td>
+  <td>Boolean</td>
+  <td>是否显示图例</td>
+  <td>true</td>
+  </tr>
+  <tr>
+  <td>precision</td>
+  <td>Number</td>
+  <td>数据显示的小数点数</td>
+  <td>0</td>
+  </tr>
+  <tr>
+  <td>stepLength</td>
+  <td>Number</td>
+  <td>初始动画进度的步长</td>
+  <td>0.05</td>
+  </tr>
+   <tr>
+  <td>intervalTime</td>
+  <td>Number</td>
+  <td>初始动画进度的间隔</td>
+  <td>60</td>
+  </tr>
+</table>
+
+circleData数据格式：
+<table>
+<tr>
+  <td>参数名称</td>
+  <td>类型</td>
+  <td>描述</td>
+  <td>默认值</td>
+  </tr>
+  <tr>
+  <td>total</td>
+  <td>Number</td>
+  <td>所有数据的总数</td>
+  <td></td>
+  </tr>
+    <tr>
+  <td>list</td>
+  <td>Array</td>
+  <td>数据列表</td>
+  <td>包含数据对象的数组，数据对象格式见下表</td>
+  </tr>
+</table>
+
+circleData.list数据格式：
+<table>
+<tr>
+  <td>参数名称</td>
+  <td>类型</td>
+  <td>描述</td>
+  <td>默认值</td>
+  </tr>
+  <tr>
+  <td>color</td>
+  <td>String</td>
+  <td>circle进度图形的颜色</td>
+  <td></td>
+  </tr>
+    <tr>
+  <td>title</td>
+  <td>String</td>
+  <td>circle进度图形的名称</td>
+  <td></td>
+  </tr>
+  <tr>
+  <td>num</td>
+  <td>Number</td>
+  <td>circle进度图形的数量</td>
   <td></td>
   </tr>
 </table>
