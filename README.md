@@ -42,13 +42,13 @@ Vue.use(vueChart);
   <td>tickValue</td>
   <td>Number</td>
   <td>y轴间隔距离</td>
-  <td></td>
+  <td>默认自动计算</td>
   </tr>
     <tr>
   <td>maxValue</td>
   <td>Number</td>
   <td>y轴最大值</td>
-  <td></td>
+  <td>默认自动计算</td>
   </tr>
   <tr>
   <td>dataType</td>
@@ -81,14 +81,14 @@ barData数据格式：
   <tr>
   <td>title</td>
   <td>String</td>
-  <td>图标的名称</td>
+  <td>图表的名称</td>
   <td></td>
   </tr>
     <tr>
   <td>list</td>
   <td>Array</td>
   <td>数据列表</td>
-  <td></td>
+  <td>包含数据对象的数组，数据对象格式见下表</td>
   </tr>
 </table>
 
@@ -117,5 +117,21 @@ barData.list数据格式：
   <td>Number</td>
   <td>bar图形的数量</td>
   <td></td>
+  </tr>
+</table>
+
+方法说明：
+<table>
+<tr>
+  <td>方法名称</td>
+  <td>参数</td>
+  <td>返回值</td>
+  <td>描述</td>
+  </tr>
+  <tr>
+  <td>draw</td>
+  <td></td>
+  <td></td>
+  <td>重新绘制图表，在数据更新后，可调用该方法实现图表重绘</td>
   </tr>
 </table>
