@@ -1,7 +1,6 @@
 <template>
-  <div class="hello">
-    <h3>{{ msg }}</h3> 
-    <button @click='updateBar'>update</button>
+  <div class="">
+    <button @click='updateBar' >update</button>
     <vue-bar ref='vuebar' :barData='barData' :barWid='50' class='barDiv'></vue-bar>
     
     <vue-bar :barData='percentData' :maxValue='1' dataType='percent' :tickValue='0.2' :precision='2' class='barDiv' ></vue-bar> 
@@ -98,14 +97,14 @@ a {
 .barDiv{
   float:left;
   width:500px;
-  height:300px;
-  margin:70px
+  height:230px;
+  margin:60px
 }
 .circleDiv{
   height:300px;
   width:500px;
   float:left;
   border:1px solid gray;
-  margin:70px
+  margin:60px
 }
 </style>
