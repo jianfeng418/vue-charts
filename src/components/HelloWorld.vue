@@ -42,7 +42,7 @@ export default {
         ]
       },
       circleData:{
-        totle:23,
+        total:23,
         list:[
           {num:8,title:'一季度',color:'#53b85e'},
           {num:3,title:'二季度',color:'#53805e'},
@@ -51,7 +51,7 @@ export default {
         ]
       },
       perCircleData:{
-        totle:23,
+        total:23,
         list:[
           {num:8,title:'一季度',color:'#53b85e'},
         ]
