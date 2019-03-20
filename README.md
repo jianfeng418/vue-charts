@@ -21,11 +21,10 @@ Vue.use(vueChart);
 ![Image message](Animation1.gif)
 使用示例：
 ```
-<button @click='updateBar'>update</button>
-
-<vue-bar ref='vuebar' :barData='barData' :barWid='50' class='barDiv'></vue-bar>
-
-<vue-bar :barData='percentData' :maxValue='1' dataType='percent' :tickValue='0.2' :precision='2' class='barDiv' ></vue-bar>
+    <button @click='updateBar' style='float:left'>update</button>
+    <vue-bar ref='vuebar' :barData='barData' :barWid='50' class='barDiv' style='clear:both'></vue-bar>
+    
+    <vue-bar ref='perbar' :barData='percentData' :maxValue='1' dataType='percent' :tickValue='0.2' :precision='2' class='barDiv' ></vue-bar> 
 
 ...
  data () {
@@ -55,13 +54,20 @@ Vue.use(vueChart);
 
  methods:{
       updateBar(){
-        this.barData.list = [
+         this.barData.list = [
           {color:'#53b85e',title:'一季度',num:8},
           {color:'#53805e',title:'二季度',num:12},
           {color:'#4efff0',title:'三季度',num:9},
           {color:'#8a94ee',title:'四季度',num:18}
         ]
+        this.percentData.list = [
+          {color:'#53b85e',title:'一季度',num:0.35},
+          {color:'#53805e',title:'二季度',num:0.74},
+          {color:'#4efff0',title:'三季度',num:0.56},
+          {color:'#8a94ee',title:'四季度',num:0.86},
+        ]
         this.$refs.vuebar.draw();
+        this.$refs.perbar.draw();
       }
     }
 
