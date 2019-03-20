@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h3>{{ msg }}</h3> 
-
-    <vue-bar :barData='barData' :barWid='50' class='barDiv'></vue-bar>
+    <button @click='updateBar'>update</button>
+    <vue-bar ref='vuebar' :barData='barData' :barWid='50' class='barDiv'></vue-bar>
     
     <vue-bar :barData='percentData' :maxValue='1' dataType='percent' :tickValue='0.2' :precision='2' class='barDiv' ></vue-bar> 
     <div class='circleDiv'>
@@ -63,6 +63,17 @@ export default {
       }
     }
   },
+  methods:{
+      updateBar(){
+        this.barData.list = [
+          {color:'#53b85e',title:'一季度',num:8},
+          {color:'#53805e',title:'二季度',num:12},
+          {color:'#4efff0',title:'三季度',num:9},
+          {color:'#8a94ee',title:'四季度',num:18}
+        ]
+        this.$refs.vuebar.draw();
+      }
+    }
 }
 </script>
 
